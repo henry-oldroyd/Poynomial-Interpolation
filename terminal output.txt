@@ -1,0 +1,70 @@
+With learning rate constant at 10^-6 this is the output:
+
+
+PS C:\Users\henry\Documents\polynomial interpolation> python main.py
+Polynomial of degree 5 randomly generated:
+0.2815*x^0 + 0.7893*x^1 + -0.8023*x^2 + -0.798*x^3 + 0.0986*x^4 + 0.2488*x^5
+This is represented by this array of coefficients:
+[0.2814956788124967, 0.7893375627484429, -0.8022663871966793, -0.7980371396934265, 0.0985577906434929, 0.24878578050466893]
+Training
+Training iteration 0: log_abs(-ΔMSE)=2.2805438460562533; log_abs(a)=-6.0
+Training iteration 0: MSE=191.0553670208; C=[0.156099, -0.365957, 0.748509, -0.179057, 0.288601, 0.149318]
+Training iteration 10000: log_abs(-ΔMSE)=-0.5456575671814655; log_abs(a)=-6.0
+Training iteration 10000: MSE=0.2927830384; C=[0.103562, -0.412294, 0.457333, -0.570124, 0.034711, 0.241018]
+Training iteration 20000: log_abs(-ΔMSE)=-1.1965090976115862; log_abs(a)=-6.0
+Training iteration 20000: MSE=0.0674130103; C=[0.061393, -0.408570, 0.228863, -0.614142, 0.046358, 0.242956]
+Training iteration 30000: log_abs(-ΔMSE)=-0.8073677390385842; log_abs(a)=-6.0
+Training iteration 30000: MSE=0.1588909396; C=[0.027526, -0.399751, 0.043932, -0.622354, 0.055804, 0.243340]
+Training iteration 40000: log_abs(-ΔMSE)=-0.8182892461500978; log_abs(a)=-6.0
+Training iteration 40000: MSE=0.1550212047; C=[0.000414, -0.390391, -0.105453, -0.626491, 0.063436, 0.243423]
+Training iteration 50000: log_abs(-ΔMSE)=-0.8100138387783464; log_abs(a)=-6.0
+Training iteration 50000: MSE=0.1568600284; C=[-0.021241, -0.380967, -0.226103, -0.629809, 0.069606, 0.243669]
+Training iteration 60000: log_abs(-ΔMSE)=-0.5889325869803181; log_abs(a)=-6.0
+Training iteration 60000: MSE=0.2595288949; C=[-0.038490, -0.371541, -0.323558, -0.632719, 0.074574, 0.243758]
+Training iteration 70000: log_abs(-ΔMSE)=-1.2390169153713075; log_abs(a)=-6.0
+Training iteration 70000: MSE=0.0594550678; C=[-0.052184, -0.362135, -0.402280, -0.635331, 0.078608, 0.243867]
+Training iteration 80000: log_abs(-ΔMSE)=-0.8407831238876309; log_abs(a)=-6.0
+Training iteration 80000: MSE=0.1460642368; C=[-0.063008, -0.352759, -0.465882, -0.637688, 0.081846, 0.243949]
+Training iteration 90000: log_abs(-ΔMSE)=-0.8913812674041912; log_abs(a)=-6.0
+Training iteration 90000: MSE=0.1301965480; C=[-0.071516, -0.343423, -0.517273, -0.639846, 0.084471, 0.244082]
+Training iteration 100000: log_abs(-ΔMSE)=-0.9530822942741272; log_abs(a)=-6.0
+Training iteration 100000: MSE=0.1131890085; C=[-0.078155, -0.334133, -0.558809, -0.641845, 0.086587, 0.244027]
+Training iteration 110000: log_abs(-ΔMSE)=-1.1378586880547028; log_abs(a)=-6.0
+Training iteration 110000: MSE=0.0745823329; C=[-0.083288, -0.324897, -0.592389, -0.643699, 0.088304, 0.244236]
+Training iteration 120000: log_abs(-ΔMSE)=-1.206296042923854; log_abs(a)=-6.0
+Training iteration 120000: MSE=0.0639682909; C=[-0.087204, -0.315717, -0.619542, -0.645445, 0.089688, 0.244245]
+Polynomial test data predictions MSE:   0.7406
+Selected coefficients
+0.281496
+0.789338
+-0.802266
+-0.798037
+0.098558
+0.248786
+learned polynomial   
+-0.088781
+-0.311152
+-0.631103
+-0.646288
+0.090277
+0.244279
+
+
+With learning rate set to vary starting as 10^-6 this is the output:
+
+
+PS C:\Users\henry\Documents\polynomial interpolation> python main.py
+Polynomial of degree 5 randomly generated:
+0.4902*x^0 + 0.5433*x^1 + -0.3146*x^2 + -0.6099*x^3 + 0.6289*x^4 + -0.5478*x^5
+This is represented by this array of coefficients:
+[0.49019594177268444, 0.5432820132431739, -0.31459519916749135, -0.6099128128098441, 0.6288530753126385, -0.5477634751019909]
+Training
+Training iteration 0: log_abs(-ΔMSE)=2.6772110947562173; log_abs(a)=-10.266885994782955
+Training iteration 0: MSE=481.1682437021; C=[-0.835168, 0.423580, 0.520782, 0.468285, -0.395790, -0.113513]
+Traceback (most recent call last):
+  File "C:\Users\henry\Documents\polynomial interpolation\main.py", line 276, in <module>
+    raise e
+  File "C:\Users\henry\Documents\polynomial interpolation\main.py", line 182, in <module>
+    raise Exception(f"a diverging: log_abs(a)={log_abs(a)}  a={a:.10f}")
+Exception: a diverging: log_abs(a)=-20.013231484206752  a=0.0000000000
+PS C:\Users\henry\Documents\polynomial interpolation> 
